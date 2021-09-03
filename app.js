@@ -1,11 +1,15 @@
-// Copy email to user's clipboard
-function copyToClipboard(element) {
-    var $temp = $("<input>");
-    $("body").append($temp);
-    $temp.val($(element).text()).select();
-    document.execCommand("copy");
-    $temp.remove();
-  }
+const express = require('express');
+const app = express();
+const path = require('path');
+const port = process.env.PORT || 3030;
 
+const public = path.resolve(__dirname, "./public");
+app.use(express.static(public));
 
-//Scroll effect
+app.listen(port, ()=>{
+    console.log("Server initialized at port or http://localhost:3030");
+});
+
+app.get('/', (req, res)=>{
+    res.sendFile(path.resolve('./views/index.html'));
+});
