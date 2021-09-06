@@ -382,10 +382,37 @@ button:hover span{
     background-image: url(/imgs/botbck.jpeg);
 }
 
-.card:hover {
-    transform: scale(1.05);
-    cursor: auto;
+/* H O V E R    O N L Y    F U L L    S C R E E N */
+
+@media (min-width:981px){
+    .card:hover {
+        transform: scale(1.05);
+        cursor: auto;
+    }
+
+    .card:hover .card-content{
+        transform: translateY(10%);
+    }
+    
+    .card:hover .card-content > * {
+        opacity: 1;
+    }
+
+    .card:hover .card-title::after {
+        transform: scaleX(1);
+    }
+
 }
+
+/* To work only when mobile to take you to projects */
+.mobile_proj_links{
+    display: none;
+    position: relative;
+    top: -180px;
+    width: 30vw;
+    height: 30vh;
+}
+
 
 .card-content {
     --padding: 1.8rem;
@@ -404,13 +431,7 @@ button:hover span{
     transition: opacity 500ms linear;
 }
 
-.card:hover .card-content{
-    transform: translateY(10%);
-}
 
-.card:hover .card-content > * {
-    opacity: 1;
-}
 
 .card-title {
     position: relative;
@@ -432,9 +453,7 @@ button:hover span{
     transition: transform 500ms ease;
 }
 
-.card:hover .card-title::after {
-    transform: scaleX(1);
-}
+
 
 .card-body {
     color: rgb(255 255 255 / 0.8);
@@ -550,9 +569,9 @@ button:hover span{
     cursor: pointer;
   }
 
+  /* * * * * * * 9 8 0   P X    M E D I A    Q U E R Y   1 * * */
+
 @media (max-width: 980px){
-
-
 
     header{
         justify-content: space-between;
@@ -572,7 +591,8 @@ button:hover span{
         position: absolute;
         top: 60px;
         right: 0;
-        
+        background-color: rgb(220, 222, 232);
+        width: 100vw;
     }
 
     .buttons button{
@@ -620,15 +640,6 @@ button:hover span{
         transform: translateY(-8px) rotate(-45deg);
       }
 
-
-   .content{
-       display: flex;
-       flex-direction: column;
-       align-items: center;
-       margin: 0;
-       height: auto;
-   }
-
    .about_wrapper{
        width: 80vw;
        margin: 0;
@@ -651,11 +662,6 @@ button:hover span{
         height: auto;
     }
 
-    .card{
-        transform: scale(0.6);
-        height: 60px;
-    }
-
     .logos{
         width: 24vw;
     }
@@ -672,6 +678,39 @@ button:hover span{
     .footer_link--items{
         font-size: 0.7em;
         width: auto;
+    }
+
+    .mobile_proj_links{
+        display: inline-block;
+    }
+
+    .card-content{
+        display: none;
+    }
+
+   .content{
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       margin: 0;
+       height: auto;
+   }
+
+   .card{
+    transform: scale(0.6);
+    height: 60px;
+    }
+
+    .card-content{
+        position: absolute;
+        top: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    .card-content h2{
+        text-align: center;
+        width: max-content;
     }
 }
 
