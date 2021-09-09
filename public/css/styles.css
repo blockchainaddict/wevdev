@@ -100,6 +100,10 @@ button {
     overflow: hidden;
 }
 
+.buttons button:hover{
+    background-color: #7a9cbe;
+}
+
 .buttons .button a{
     color: black;
     font-size: 2em;
