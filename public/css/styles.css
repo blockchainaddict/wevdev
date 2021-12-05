@@ -176,15 +176,45 @@ button:hover span{
 }
 
 .banner_quote{
-    position: absolute;
-    left: 2em;
-    bottom: 1em;
+    /* position: absolute; */
+    /* left: 2em; */
+    /* bottom: 1em; */
+    text-align: center;
+    margin-top: 150px;
 }
 
 .banner_quote {
     opacity: 0;
     transform: translateX(-3rem);
     animation: nameFade 2s +1s forwards;
+}
+
+#span_animation:before{
+    content: '';
+    animation: animate infinite 16s;
+    transition: all ease-in-out;
+}
+
+@keyframes animate{
+    0%{
+        content: 'Welcome';
+    }
+    20%{
+        content: 'Wilkommen';
+    }
+    40%{
+        content: 'Bienvenue';
+    }
+    60%{
+        content: 'Bienvenido';
+    }
+    80%{
+        content: 'Benvenuto';
+    }
+    100%{
+        content: '환영하다';
+    }
+
 }
 
 /* About */
