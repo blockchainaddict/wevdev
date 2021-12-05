@@ -283,8 +283,11 @@ button:hover span{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 7vh 7vw 0 7vw;
-    padding: 0 7vw;
+    margin: 0 7vw;
+    padding: 10px 7vw;
+    /* background-color: rgba(133, 202, 238, 0.4); */
+    background: linear-gradient(35deg, #CCFFFF, #FFCCCC);
+    border-radius: 20px;
 }
 
 .bullets_wrapper {
@@ -323,7 +326,8 @@ button:hover span{
 
 .logos {
     display: grid;
-    width: 11%;
+    width:7%;
+    margin: 0 22px;
     justify-content: center;
     align-content: center;
     align-items: center;
@@ -348,7 +352,7 @@ button:hover span{
 
 .projects_meta_container{
     /*background: linear-gradient(white, rgb(155, 83, 155), #78b0e9, white);*/
-    background: linear-gradient(35deg, #CCFFFF, #FFCCCC)
+    background: linear-gradient(35deg,#FFCCCC, #CCFFFF)
 }
 
 .projects {
@@ -529,7 +533,7 @@ button:hover span{
 
 .footer_container {
     background:  rgb(26, 25, 25);
-    padding: 2rem 0;
+    padding: 1rem 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
