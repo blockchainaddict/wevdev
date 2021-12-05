@@ -378,6 +378,9 @@ button:hover span{
 #th_card2 {
     background-image: url(/imgs/romans.jpg);
 }
+#th_card3 {
+    background-image: url(/imgs/cms.jpg);
+}
 
 .card:nth-of-type(3) {
     background-image: url(/imgs/onlineS1.jpg);
