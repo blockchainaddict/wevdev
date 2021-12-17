@@ -529,6 +529,17 @@ button:hover span{
     height: 300px;
 }
 
+.other_wrapper{
+    display: flex;
+    justify-content: center;
+}
+.other_container{
+    width: 60%;
+}
+.other_container h3, h4{
+    text-align: center;
+}
+    
 /* Footer */
 
 .footer_container {
